@@ -1,15 +1,17 @@
 .container {
   max-width: 500px;
-  display: block;
-  margin: 0 auto;
-}
-.App {
+
   border: solid 1px #dadde1;
   border-radius: 8px;
   padding: 20px 16px 24px;
   position: relative;
   display: block;
   margin-top: 50px;
+}
+.App {
+  max-width: 500px;
+  display: block;
+  margin: 0 auto;
 }
 .link {
   font-family: monospace;
