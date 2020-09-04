@@ -10,7 +10,11 @@ export default function App() {
         <Search />
       </div>
       <span className="link">
-        <a href="https://github.com/CarlaAll/react-weather-app" target="_blank">
+        <a
+          href="https://github.com/CarlaAll/react-weather-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Open-Source Code
         </a>{" "}
         by Carla Allenbach
