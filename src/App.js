@@ -1,6 +1,7 @@
 import React from "react";
-import "./app.css";
+
 import Search from "./Search";
+import "./weatherapp.css";
 
 export default function App() {
   return (
