@@ -36,34 +36,40 @@ export default function Search() {
   let form = (
     <form onSubmit={handleSubmit}>
       <input type="search" placeholder="Enter a city.." onChange={updateCity} />
-      <button type="Submit"> Search</button> <Current />
+      <button type="Submit" className="btn btn-primary">
+        {" "}
+        Search
+      </button>{" "}
+      <Current />
     </form>
   );
   if (loaded) {
     return (
       <div>
         {form}
-        <div className="col-6">
-          <ul>
-            <li> Location: {weather.Location}</li>
-            <li>
-              <span>
+        <div className="row">
+          <div className="col-6">
+            <ul>
+              <li>
                 <img
                   className="weathericon"
                   src={weather.icon}
                   alt={weather.description}
                 />{" "}
-              </span>
-              <span>{Math.round(weather.temperature)}°C</span>
-            </li>
-          </ul>
-        </div>
-        <div className="col-6">
-          <ul>
-            <li>Description: {weather.description}</li>
-            <li>Humidity: {weather.humidity}%</li>
-            <li>Wind: {weather.wind}km/h</li>
-          </ul>
+                {Math.round(weather.temperature)}°C
+              </li>
+              <li>
+                <h3>{weather.Location}</h3>
+              </li>
+            </ul>
+          </div>
+          <div className="col-6">
+            <ul>
+              <li>Description: {weather.description}</li>
+              <li>Humidity: {weather.humidity}%</li>
+              <li>Wind: {weather.wind}km/h</li>
+            </ul>
+          </div>
         </div>
       </div>
     );

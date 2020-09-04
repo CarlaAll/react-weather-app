@@ -8,7 +8,6 @@ export default function App() {
     <div className="App">
       <div className="container">
         <Search />
-
         <footer className="link">
           <a
             href="https://github.com/CarlaAll/react-weather-app"

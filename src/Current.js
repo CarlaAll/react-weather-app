@@ -27,8 +27,8 @@ export default function Current() {
     axios.get(apiUrl).then(displayCurrentWeather);
   }
 
-  let button = (
-    <button type="Submit" onClick={handleClick}>
+  let formCurrent = (
+    <button type="Submit" onClick={handleClick} className="btn btn-success">
       {" "}
       Current{" "}
     </button>
@@ -37,20 +37,35 @@ export default function Current() {
   if (loaded) {
     return (
       <div>
-        {button}
-        <ul>
-          <li> Location: {weather.Location}</li>
-          <li>Temperature: {Math.round(weather.temperature)}°C</li>
-          <li>Description: {weather.description}</li>
-          <li>Humidity: {weather.humidity}%</li>
-          <li>Wind: {weather.wind}km/h</li>
-          <li>
-            <img src={weather.icon} alt={weather.description} />
-          </li>
-        </ul>
+        {formCurrent}
+
+        <div className="row">
+          <div className="col-6">
+            <ul>
+              <li>
+                <img
+                  className="weathericon"
+                  src={weather.icon}
+                  alt={weather.description}
+                />{" "}
+                {Math.round(weather.temperature)}°C
+              </li>
+              <li>
+                <h1>{weather.Location}</h1>
+              </li>
+            </ul>
+          </div>
+          <div className="col-6">
+            <ul>
+              <li>Description: {weather.description}</li>
+              <li>Humidity: {weather.humidity}%</li>
+              <li>Wind: {weather.wind}km/h</li>
+            </ul>
+          </div>
+        </div>
       </div>
     );
   } else {
-    return button;
+    return formCurrent;
   }
 }
