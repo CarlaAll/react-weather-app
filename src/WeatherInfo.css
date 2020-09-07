@@ -1,0 +1,35 @@
+.Weather h3 {
+  font-weight: 325;
+  font-size: 42px;
+  padding-top: 25px;
+  line-height: 0.5em;
+}
+
+.Weather .time {
+  font-size: 28px;
+  font-weight: 250;
+  margin-bottom: 40px;
+}
+
+.Weather img {
+  height: 64px;
+  width: 64px;
+  display: inline-block;
+  margin-right: 10px;
+  display: inline-block;
+}
+.Weather .temperature {
+  font-weight: bold;
+  color: rgb(33, 33, 33);
+  font-size: 64px;
+  line-height: 64px;
+  font-weight: 400;
+}
+
+.Weather .units {
+  color: rgb(33, 33, 33);
+  font-size: 16px;
+  font-weight: 400;
+  position: relative;
+  top: -32px;
+}
