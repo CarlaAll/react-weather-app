@@ -1,6 +1,12 @@
-.container {
-  max-width: 500px;
+.App {
+  font-family: Helvetica, sans-serif;
+  max-width: 600px;
+  display: block;
+  margin: 0 auto;
+}
 
+.App .container {
+  max-width: 600px;
   border: solid 1px #dadde1;
   border-radius: 8px;
   padding: 20px 16px 24px;
@@ -8,11 +14,12 @@
   display: block;
   margin-top: 50px;
 }
-.App {
-  max-width: 500px;
-  display: block;
-  margin: 0 auto;
-}
-.link {
+
+.App .link {
   font-family: monospace;
+}
+
+.App footer {
+  text-align: center;
+  margin: 15px;
 }
