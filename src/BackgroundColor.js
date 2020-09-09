@@ -3,7 +3,7 @@ import App from "./App";
 import "./BackgroundColor.css";
 
 export default function BackgroundColor(props) {
-  let temp = Math.round(data.temperature);
+  let temp = Math.round(props.data.temperature);
   if (temp > -30 && temp <= -15) {
     return (
       <div className="cold-3">

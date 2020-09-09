@@ -2,6 +2,7 @@ import React from "react";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 import TemperatureUnit from "./TemperatureUnit";
+import Advice from "./Advice";
 
 import "./WeatherInfo.css";
 
@@ -30,7 +31,8 @@ export default function WeatherInfo(props) {
       </div>
       <div className="col-6">
         <div className="advice">
-          <strong>Today's Advice:</strong> <br /> take an umbrella with you.
+          <strong>Today's Advice:</strong> <br />
+          <Advice description={props.data.description} />
         </div>
         <ul className="additional">
           <li className="text-capitalize">{props.data.description}</li>
