@@ -1,8 +1,9 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
-import "./WeatherInfo.css";
 import WeatherIcon from "./WeatherIcon";
 import TemperatureUnit from "./TemperatureUnit";
+
+import "./WeatherInfo.css";
 
 export default function WeatherInfo(props) {
   return (
@@ -10,18 +11,18 @@ export default function WeatherInfo(props) {
       <div className="col-6">
         <div className="clearfix">
           <div className="float-left">
-            <WeatherIcon code={props.info.icon} />
+            <WeatherIcon code={props.data.icon} />
           </div>
           <div className="float-left">
-            <TemperatureUnit celsius={props.info.temperature} />
+            <TemperatureUnit celsius={props.data.temperature} />
           </div>
         </div>
         <ul>
           <li>
-            <h3>{props.info.city}</h3>
+            <h3>{props.data.city}</h3>
           </li>
           <li className="time">
-            <FormattedDate date={props.info.date} />
+            <FormattedDate date={props.data.date} />
           </li>
         </ul>
       </div>
@@ -30,9 +31,9 @@ export default function WeatherInfo(props) {
           <strong>Today's Advice:</strong> <br /> take an umbrella with you.
         </div>
         <ul className="additional">
-          <li className="text-capitalize">{props.info.description}</li>
-          <li>Humidity: {props.info.humidity}%</li>
-          <li>Wind: {props.info.wind} km/h</li>
+          <li className="text-capitalize">{props.data.description}</li>
+          <li>Humidity: {props.data.humidity}%</li>
+          <li>Wind: {props.data.wind} km/h</li>
         </ul>
       </div>
     </div>

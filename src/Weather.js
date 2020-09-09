@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
 import WeatherForecast from "./WeatherForecast";
 import BackgroundColor from "./BackgroundColor";
-
 import axios from "axios";
-
 import "./Weather.css";
 
 export default function Weather(props) {
@@ -15,14 +13,15 @@ export default function Weather(props) {
     setWeatherData({
       ready: true,
       temperature: response.data.main.temp,
-      description: response.data.weather[0].description,
-      wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
-      city: `${response.data.name}, ${response.data.sys.country}`,
       date: new Date(response.data.dt * 1000),
+      description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
+      wind: response.data.wind.speed,
+      city: `${response.data.name}, ${response.data.sys.country}`,
     });
   }
+
   function handleSubmit(event) {
     event.preventDefault();
     search();
@@ -58,7 +57,7 @@ export default function Weather(props) {
             </div>
           </div>
         </form>
-        <WeatherInfo info={weatherData} />
+        <WeatherInfo data={weatherData} />
         <WeatherForecast city={weatherData.city} />
         <BackgroundColor data={weatherData} />
       </div>
