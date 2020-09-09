@@ -9,7 +9,6 @@ export default function Current() {
     setLoaded(true);
     setWeather({
       Location: response.data.name,
-
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
@@ -21,7 +20,7 @@ export default function Current() {
   function handleClick(event) {
     event.preventDefault();
 
-    const apiKey = "0b04f7882b2a886e7942aa9e854e4071";
+    const apiKey = "a1819ac2175222ef43761a4da2a13963";
     const units = "metric";
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=15.3&lon=37.5&appid=${apiKey}&units=${units}`;
     axios.get(apiUrl).then(displayCurrentWeather);
